@@ -12,8 +12,6 @@ Player::Player(float m, float x , float y) {
 	mass = m;
 	angle = 0;
 
-	dead = false;
-
 	playerSprite = CCSprite::create("player.png");
 	playerSprite->setScale(mass/10);
 	addChild(playerSprite);
@@ -65,4 +63,8 @@ void Player::checkEdges() {
 void Player::applyForce(PVector *force) {
 	PVector *f = PVector::div(force,mass);				// Newton's second law
 	acceleration->add(f);
+}
+
+bool Player::isDead() {
+	return location->y < 50 ? true : false;
 }

@@ -66,6 +66,7 @@ void Battle::goMainMenu(CCObject* pSender) {
 
 void Battle::gameLogic(float dt)
 {
+	// move player
 	player->update();
 	player->display();
 
@@ -73,20 +74,19 @@ void Battle::gameLogic(float dt)
 	float realLocationX = player->getRealLocationX();
 	float realVelocityX = player->getRealVelocityX();
 	CCRect rect = background->getTextureRect();
-	if(realLocationX > size.width/2 && realLocationX < (2048 - size.width/2))
-	{
-		if(rect.origin.x > 4096){
+	if(realLocationX > size.width/2 && realLocationX < (2048 - size.width/2)) {
+		if(rect.origin.x > 4096) {
 			background->setTextureRect(CCRectMake(0, rect.origin.y, rect.size.width, rect.size.height));
 		} else {
 			background->setTextureRect(CCRectMake(rect.origin.x + realVelocityX, rect.origin.y, rect.size.width, rect.size.height));
 		}
 	}
 
-	if(player->isDead())
-	{
+	// game over
+	if(player->isDead()) {
 		CCSprite *gameOver = CCSprite::create("gameover.png");
 		gameOver->setPosition( ccp(size.width/2, size.height/2) );
-		addChild(gameOver,200);
+		addChild(gameOver, 3);
 		player->pauseSchedulerAndActions();
 		pauseSchedulerAndActions();
 	}

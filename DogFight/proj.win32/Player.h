@@ -20,8 +20,6 @@ protected:
 	float mass;
 	float angle;
 
-	bool dead;
-
 	CCSprite *playerSprite;
 	CCSize size;
 
@@ -40,7 +38,7 @@ public:
 	void setVelocity(PVector *v) { velocity->x = v->x; velocity->y = v->y; };
 	void turn(float a);
 	
-	bool isDead() { return dead; }	
+	bool isDead();
 };
 
 #endif
