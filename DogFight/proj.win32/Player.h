@@ -1,8 +1,6 @@
 #ifndef __PLAYER__
 #define __PLAYER__
 
-#define constrain(amt,low,high) ((amt)<(low)?(low):((amt)>(high)?(high):(amt)))
-
 #include "cocos2d.h"
 #include "Box2D/Box2D.h"
 #include "PVector.h"

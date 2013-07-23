@@ -126,6 +126,7 @@
     <Image Include="..\Resources\HelloWorld.png" />
     <Image Include="..\Resources\moveBack.png" />
     <Image Include="..\Resources\player.png" />
+    <Image Include="..\Resources\vehicle.png" />
     <Image Include="res\DogFight.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +140,7 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="PVector.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Vehicle.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
@@ -147,6 +149,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PVector.cpp" />
+    <ClCompile Include="Vehicle.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

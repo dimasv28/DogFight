@@ -5,6 +5,7 @@
 #include "Box2D/Box2D.h"
 #include "keyboard_dispatcher\CCKeyboardDispatcher.h"
 #include "Player.h"
+#include "Vehicle.h"
 
 #define LEFT_KEY 37
 #define RIGHT_KEY 39
@@ -20,6 +21,7 @@ using namespace cocos2d;
 class Battle : public CCLayer, public CCKeyboardDelegate {
 protected:
 	Player *player;
+	Vehicle *vehicle;
 	CCSprite *background;
 	CCSize size;
 	bool keyLeftFlag;
